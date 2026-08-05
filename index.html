@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Predictor</title>
+    <meta name="description" content="Predicts the likelihood of heart disease using a pre-trained Machine Learning model.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>❤️ Heart Disease Prediction App</h1>
+            <p>Predicts the likelihood of heart disease based on medical data.</p>
+        </header>
+
+        <main>
+            <form id="predictionForm" class="glass-panel">
+                <h2>🧾 Enter Patient Details</h2>
+                
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" min="1" max="120" value="50" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="sex">Sex</label>
+                        <select id="sex" name="sex">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="cp">Chest Pain Type (cp)</label>
+                        <select id="cp" name="cp">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="trestbps">Resting Blood Pressure (mm Hg)</label>
+                        <input type="number" id="trestbps" name="trestbps" min="50" max="250" value="120" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="chol">Cholesterol (mg/dl)</label>
+                        <input type="number" id="chol" name="chol" min="50" max="600" value="200" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="fbs">Fasting Blood Sugar > 120 mg/dl</label>
+                        <select id="fbs" name="fbs">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="restecg">Resting ECG (restecg)</label>
+                        <select id="restecg" name="restecg">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="thalach">Max Heart Rate Achieved</label>
+                        <input type="number" id="thalach" name="thalach" min="50" max="250" value="150" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="exang">Exercise Induced Angina (exang)</label>
+                        <select id="exang" name="exang">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="oldpeak">ST Depression (oldpeak)</label>
+                        <input type="number" step="0.1" id="oldpeak" name="oldpeak" min="0.0" max="10.0" value="1.0" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="slope">Slope</label>
+                        <select id="slope" name="slope">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="ca">Number of Major Vessels (ca)</label>
+                        <select id="ca" name="ca">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="thal">Thal</label>
+                        <select id="thal" name="thal">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="predict-btn">
+                    <span>🔍</span> Predict Risk
+                </button>
+            </form>
+
+            <div id="result" class="result-card hidden">
+                <div class="result-content"></div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
