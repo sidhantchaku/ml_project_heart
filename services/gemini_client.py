@@ -30,8 +30,13 @@ from services.bedrock_client import (
 
 logger = logging.getLogger("cardiorisk.gemini_client")
 
-_MAX_OUTPUT_TOKENS = 1024
+_MAX_OUTPUT_TOKENS = 2048
 _REQUEST_TIMEOUT_MS = 20_000
+# gemini-2.5-flash uses "thinking" tokens by default, drawn from the same
+# max_output_tokens budget as the visible answer -- an unbounded thinking
+# budget can silently consume the entire response, leaving response.text
+# empty with no error. Capping it leaves headroom for the actual JSON answer.
+_THINKING_BUDGET = 256
 
 
 class GeminiClient:
@@ -99,6 +104,7 @@ class GeminiClient:
                     system_instruction=system_prompt,
                     max_output_tokens=_MAX_OUTPUT_TOKENS,
                     temperature=0.2,
+                    thinking_config=genai_types.ThinkingConfig(thinking_budget=_THINKING_BUDGET),
                 ),
             )
         except genai_errors.ClientError as exc:
@@ -109,6 +115,10 @@ class GeminiClient:
 
         text = getattr(response, "text", None)
         if not text:
+            finish_reason = None
+            if getattr(response, "candidates", None):
+                finish_reason = getattr(response.candidates[0], "finish_reason", None)
+            logger.warning("gemini_empty_response finish_reason=%s", finish_reason)
             raise BedrockServiceError("Gemini response did not contain any text content.")
         return text
 
