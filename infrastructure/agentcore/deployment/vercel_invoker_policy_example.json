@@ -1,0 +1,13 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "InvokeThisSpecificAgentCoreRuntimeOnly",
+      "Effect": "Allow",
+      "Action": [
+        "bedrock-agentcore:InvokeAgentRuntime"
+      ],
+      "Resource": "<YOUR_AGENTCORE_RUNTIME_ARN>"
+    }
+  ]
+}

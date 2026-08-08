@@ -1,0 +1,42 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "InvokeSelectedBedrockFoundationModelOnly",
+      "Effect": "Allow",
+      "Action": [
+        "bedrock:InvokeModel",
+        "bedrock:InvokeModelWithResponseStream"
+      ],
+      "Resource": "arn:aws:bedrock:<YOUR_REGION>::foundation-model/<YOUR_BEDROCK_MODEL_ID>"
+    },
+    {
+      "Sid": "RetrieveFromSpecificKnowledgeBaseOnly",
+      "Effect": "Allow",
+      "Action": [
+        "bedrock-agent-runtime:Retrieve"
+      ],
+      "Resource": "arn:aws:bedrock:<YOUR_REGION>:<YOUR_ACCOUNT_ID>:knowledge-base/<YOUR_KNOWLEDGE_BASE_ID>"
+    },
+    {
+      "Sid": "WriteLogsToThisAgentsLogGroupOnly",
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents",
+        "logs:DescribeLogStreams"
+      ],
+      "Resource": "arn:aws:logs:<YOUR_REGION>:<YOUR_ACCOUNT_ID>:log-group:/aws/bedrock-agentcore/runtimes/cardiorisk-ai*:*"
+    },
+    {
+      "Sid": "EmitAgentCoreObservabilityTraces",
+      "Effect": "Allow",
+      "Action": [
+        "xray:PutTraceSegments",
+        "xray:PutTelemetryRecords"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

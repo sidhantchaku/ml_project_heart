@@ -260,6 +260,26 @@ Always handle medical data responsibly:
 
 ---
 
+## Evaluation
+
+The Bedrock-grounded explanation/agent layer (added in later phases, see
+`agent/`, `services/`, `tools/knowledge_retrieval.py`) has its own
+evaluation suite under [`evaluation/`](evaluation/README.md), covering
+retrieval quality, citation correctness, generation safety/groundedness,
+safety-screening accuracy, and end-to-end agent regression checks.
+
+```bash
+python -m evaluation.run_all
+```
+
+runs the complete offline suite (mock mode, no AWS calls, deterministic) and
+writes reports to `evaluation/results/`. See
+[`evaluation/README.md`](evaluation/README.md) for metric definitions, how to
+add test cases, mock vs. live AWS mode, and known limitations of keyword-based
+matching.
+
+---
+
 ## References
 
 - [Precision, Recall, F1-Score](https://scikit-learn.org/stable/modules/model_evaluation.html#precision-recall)

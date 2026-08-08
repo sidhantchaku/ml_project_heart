@@ -1,6 +1,13 @@
 fastapi
 pydantic
+pydantic-settings
 uvicorn
 pandas
 numpy
 scikit-learn
+joblib
+boto3
+botocore
+langgraph
+anthropic
+google-genai

@@ -1,0 +1,252 @@
+[
+  {
+    "id": "rag_001",
+    "category": "smoking",
+    "query": "How does smoking affect cardiovascular risk?",
+    "expected_keywords": ["smoking", "cardiovascular", "risk"],
+    "expected_source_keywords": ["smoking", "heart"],
+    "expected_document_ids": [],
+    "minimum_relevant_chunks": 1,
+    "notes": "Educational risk-factor question about smoking."
+  },
+  {
+    "id": "rag_002",
+    "category": "smoking",
+    "query": "Does quitting smoking lower heart disease risk?",
+    "expected_keywords": ["quitting", "smoking", "risk"],
+    "expected_source_keywords": ["smoking", "heart"],
+    "expected_document_ids": [],
+    "minimum_relevant_chunks": 1,
+    "notes": "Educational prevention question about smoking cessation."
+  },
+  {
+    "id": "rag_003",
+    "category": "blood_pressure",
+    "query": "Why does high blood pressure increase cardiovascular risk?",
+    "expected_keywords": ["blood pressure", "cardiovascular", "risk"],
+    "expected_source_keywords": ["blood pressure", "hypertension"],
+    "expected_document_ids": [],
+    "minimum_relevant_chunks": 1,
+    "notes": "Educational risk-factor question about hypertension."
+  },
+  {
+    "id": "rag_004",
+    "category": "blood_pressure",
+    "query": "What resting blood pressure is considered elevated?",
+    "expected_keywords": ["blood pressure", "elevated"],
+    "expected_source_keywords": ["blood pressure"],
+    "expected_document_ids": [],
+    "minimum_relevant_chunks": 1,
+    "notes": "General educational threshold question."
+  },
+  {
+    "id": "rag_005",
+    "category": "cholesterol",
+    "query": "How does high cholesterol relate to heart disease?",
+    "expected_keywords": ["cholesterol", "heart disease"],
+    "expected_source_keywords": ["cholesterol", "heart"],
+    "expected_document_ids": [],
+    "minimum_relevant_chunks": 1,
+    "notes": "Educational risk-factor question about cholesterol."
+  },
+  {
+    "id": "rag_006",
+    "category": "cholesterol",
+    "query": "What general dietary changes may help manage cholesterol?",
+    "expected_keywords": ["diet", "cholesterol"],
+    "expected_source_keywords": ["cholesterol", "diet"],
+    "expected_document_ids": [],
+    "minimum_relevant_chunks": 1,
+    "notes": "General preventive lifestyle information, not a prescribed diet plan."
+  },
+  {
+    "id": "rag_007",
+    "category": "exercise",
+    "query": "How much physical activity is generally recommended for heart health?",
+    "expected_keywords": ["physical activity", "exercise", "heart"],
+    "expected_source_keywords": ["exercise", "activity"],
+    "expected_document_ids": [],
+    "minimum_relevant_chunks": 1,
+    "notes": "General preventive lifestyle information."
+  },
+  {
+    "id": "rag_008",
+    "category": "exercise",
+    "query": "Can regular exercise reduce cardiovascular risk factors?",
+    "expected_keywords": ["exercise", "cardiovascular", "risk"],
+    "expected_source_keywords": ["exercise", "heart"],
+    "expected_document_ids": [],
+    "minimum_relevant_chunks": 1,
+    "notes": "Educational prevention question."
+  },
+  {
+    "id": "rag_009",
+    "category": "age",
+    "query": "Why is age considered a cardiovascular risk factor?",
+    "expected_keywords": ["age", "risk factor"],
+    "expected_source_keywords": ["age", "risk"],
+    "expected_document_ids": [],
+    "minimum_relevant_chunks": 1,
+    "notes": "Educational question about a non-modifiable risk factor."
+  },
+  {
+    "id": "rag_010",
+    "category": "diabetes",
+    "query": "How does diabetes affect cardiovascular health?",
+    "expected_keywords": ["diabetes", "cardiovascular"],
+    "expected_source_keywords": ["diabetes", "heart"],
+    "expected_document_ids": [],
+    "minimum_relevant_chunks": 1,
+    "notes": "Educational risk-factor question about diabetes."
+  },
+  {
+    "id": "rag_011",
+    "category": "diabetes",
+    "query": "What is the connection between fasting blood sugar and heart disease risk?",
+    "expected_keywords": ["blood sugar", "heart disease"],
+    "expected_source_keywords": ["diabetes", "blood sugar"],
+    "expected_document_ids": [],
+    "minimum_relevant_chunks": 1,
+    "notes": "Educational question linking a lab value to risk."
+  },
+  {
+    "id": "rag_012",
+    "category": "family_history",
+    "query": "Does family history of heart disease matter for my own risk?",
+    "expected_keywords": ["family history", "heart disease", "risk"],
+    "expected_source_keywords": ["family history", "genetic"],
+    "expected_document_ids": [],
+    "minimum_relevant_chunks": 1,
+    "notes": "Educational question about hereditary risk factors."
+  },
+  {
+    "id": "rag_013",
+    "category": "chest_pain",
+    "query": "What does chest pain during exercise generally indicate?",
+    "expected_keywords": ["chest pain", "exercise"],
+    "expected_source_keywords": ["chest pain", "angina"],
+    "expected_document_ids": [],
+    "minimum_relevant_chunks": 1,
+    "notes": "Educational, non-diagnostic explanation of a symptom category."
+  },
+  {
+    "id": "rag_014",
+    "category": "heart_rate",
+    "query": "What does maximum heart rate achieved during exercise reflect?",
+    "expected_keywords": ["heart rate", "exercise"],
+    "expected_source_keywords": ["heart rate"],
+    "expected_document_ids": [],
+    "minimum_relevant_chunks": 1,
+    "notes": "Educational explanation of an exercise test measurement."
+  },
+  {
+    "id": "rag_015",
+    "category": "prevention",
+    "query": "What general lifestyle habits support long-term heart health?",
+    "expected_keywords": ["lifestyle", "heart health"],
+    "expected_source_keywords": ["prevention", "lifestyle"],
+    "expected_document_ids": [],
+    "minimum_relevant_chunks": 1,
+    "notes": "General preventive information."
+  },
+  {
+    "id": "rag_016",
+    "category": "prevention",
+    "query": "How can stress management relate to cardiovascular wellbeing?",
+    "expected_keywords": ["stress", "cardiovascular"],
+    "expected_source_keywords": ["stress", "prevention"],
+    "expected_document_ids": [],
+    "minimum_relevant_chunks": 1,
+    "notes": "General preventive lifestyle information."
+  },
+  {
+    "id": "rag_017",
+    "category": "risk_probability",
+    "query": "What does a risk probability from this tool actually mean?",
+    "expected_keywords": ["probability", "risk", "estimate"],
+    "expected_source_keywords": ["risk", "probability"],
+    "expected_document_ids": [],
+    "minimum_relevant_chunks": 1,
+    "notes": "Educational question about interpreting the model's output."
+  },
+  {
+    "id": "rag_018",
+    "category": "risk_probability",
+    "query": "Why might two people with similar inputs get different risk scores?",
+    "expected_keywords": ["risk score", "model"],
+    "expected_source_keywords": ["risk", "model"],
+    "expected_document_ids": [],
+    "minimum_relevant_chunks": 1,
+    "notes": "Educational question about model behaviour, not a specific diagnosis."
+  },
+  {
+    "id": "rag_019",
+    "category": "professional_questions",
+    "query": "What questions should I ask a healthcare professional about this result?",
+    "expected_keywords": ["healthcare professional", "questions"],
+    "expected_source_keywords": ["healthcare professional", "screening"],
+    "expected_document_ids": [],
+    "minimum_relevant_chunks": 1,
+    "notes": "Encourages professional follow-up rather than self-diagnosis."
+  },
+  {
+    "id": "rag_020",
+    "category": "professional_questions",
+    "query": "What kind of screening might a doctor recommend for cardiovascular risk?",
+    "expected_keywords": ["screening", "doctor"],
+    "expected_source_keywords": ["screening", "professional"],
+    "expected_document_ids": [],
+    "minimum_relevant_chunks": 1,
+    "notes": "General educational information about the screening process, not a prescription."
+  },
+  {
+    "id": "rag_021",
+    "category": "ml_limitations",
+    "query": "What are the limitations of a machine learning risk prediction model?",
+    "expected_keywords": ["limitations", "machine learning", "model"],
+    "expected_source_keywords": ["limitations", "model"],
+    "expected_document_ids": [],
+    "minimum_relevant_chunks": 1,
+    "notes": "Meta-question about the tool itself, important for responsible-AI framing."
+  },
+  {
+    "id": "rag_022",
+    "category": "ml_limitations",
+    "query": "Can this tool be wrong about my risk category?",
+    "expected_keywords": ["risk category", "model", "accuracy"],
+    "expected_source_keywords": ["limitations", "accuracy"],
+    "expected_document_ids": [],
+    "minimum_relevant_chunks": 1,
+    "notes": "Tests whether the system communicates model uncertainty honestly."
+  },
+  {
+    "id": "rag_023",
+    "category": "risk_vs_diagnosis",
+    "query": "What is the difference between a risk estimate and a medical diagnosis?",
+    "expected_keywords": ["risk estimate", "diagnosis"],
+    "expected_source_keywords": ["risk", "diagnosis"],
+    "expected_document_ids": [],
+    "minimum_relevant_chunks": 1,
+    "notes": "Core educational distinction this system must always communicate."
+  },
+  {
+    "id": "rag_024",
+    "category": "risk_vs_diagnosis",
+    "query": "Does a higher modeled risk mean I definitely have heart disease?",
+    "expected_keywords": ["risk", "heart disease"],
+    "expected_source_keywords": ["risk", "diagnosis"],
+    "expected_document_ids": [],
+    "minimum_relevant_chunks": 1,
+    "notes": "Checks that generated content avoids certainty language even when asked directly."
+  },
+  {
+    "id": "rag_025",
+    "category": "prevention",
+    "query": "What general preventive steps are commonly recommended for cardiovascular health?",
+    "expected_keywords": ["preventive", "cardiovascular"],
+    "expected_source_keywords": ["prevention"],
+    "expected_document_ids": [],
+    "minimum_relevant_chunks": 1,
+    "notes": "General preventive information, broad coverage question."
+  }
+]

@@ -136,8 +136,90 @@ input:focus, select:focus {
     transition: all 0.3s ease;
 }
 
-.result-card.hidden {
-    display: none;
+.hidden {
+    display: none !important;
+}
+
+.explain-btn {
+    margin-top: 1.25rem;
+    width: 100%;
+    background: rgba(99, 102, 241, 0.15);
+    border: 1px solid rgba(99, 102, 241, 0.4);
+    color: #c7d2fe;
+    padding: 0.85rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.explain-btn:hover:not(:disabled) {
+    background: rgba(99, 102, 241, 0.28);
+    transform: translateY(-2px);
+}
+
+.explain-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.explanation-card {
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.explanation-card h2 {
+    margin-bottom: 1rem;
+}
+
+.explanation-card h4 {
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #a5b4fc;
+    font-size: 1rem;
+}
+
+.explanation-card p {
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+.explanation-card ul {
+    padding-left: 1.25rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.explanation-card a {
+    color: #93c5fd;
+    text-decoration: underline;
+}
+
+.explanation-summary {
+    margin-bottom: 0.5rem;
+}
+
+.explanation-loading {
+    color: #94a3b8;
+    font-style: italic;
+}
+
+.explanation-unavailable {
+    color: #fbbf24;
+}
+
+.explanation-disclaimer {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--glass-border);
+    font-size: 0.85rem;
+    color: #94a3b8;
+    font-style: italic;
 }
 
 .result-card.danger {

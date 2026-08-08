@@ -1,0 +1,16 @@
+# Dependencies for the AgentCore Runtime deployment package.
+# Mirrors the root requirements.txt (the agent entrypoint reuses agent/,
+# api/schemas.py, services/, tools/, config/ unchanged) plus the AgentCore
+# SDK itself. Kept as a separate file so the Vercel deployment's
+# requirements.txt never needs the AgentCore SDK, and vice versa.
+fastapi
+pydantic
+pydantic-settings
+pandas
+numpy
+scikit-learn
+joblib
+boto3
+botocore
+langgraph
+bedrock-agentcore
